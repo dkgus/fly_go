@@ -18,6 +18,33 @@ body{
     margin: 0 auto;
 }
 
+
+.login a, .sign_up a{
+    z-index: 100000000;
+    position: relative;
+    top:100px;
+    left: 1400px;
+    font-size: 1.1rem;
+    /* font-family: 'Akaya Kanadaka', cursive; */
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 100;
+    color: white;
+
+}
+
+.login a{
+    top:100px;
+    left: 1400px;
+}
+
+
+.sign_up a{
+    top:79px;
+    left: 1463px;
+
+}
+
+
 section{
     position: relative;
     width: 100%;

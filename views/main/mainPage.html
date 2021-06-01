@@ -20,12 +20,23 @@
 </head> 
 <body>
 
-
+    {% block header %}
+	{% include 'outline/header/menubar.html' %}
+	{% endblock %}
+		
 
     
     <main>
             
-            
+        <article>
+            <div class="login">
+                <a href="#">Login  |</a> 
+            </div>
+
+            <div class="sign_up">
+                <a href="#">Sign Up</a>
+            </div>
+        </article>
             
 
         <section>
@@ -186,8 +197,10 @@
     
 
 </article>
-
+{% block footer %}
+{% include 'outline/footer/footer.html' %}
+{% endblock %}
 </body>
-<script type="text/javascript"  src="/fly&go/js/script3.js"></script>
+<script type="text/javascript"  src="js/script3.js"></script>
 
 </html>

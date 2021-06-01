@@ -4,8 +4,16 @@
 <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;1,100&display=swap" rel="stylesheet">
 {% endblock %}
+
+{% block header %}
+{% include 'outline/header/menubar.html' %}
+{% endblock %}
+
 {% block content %}
     <h1>{{error.message | safe}}</h1>
     <h2>{{error.status}}</h2>
 {% endblock %}
 
+{% block footer %}
+{% include 'outline/footer/footer.html' %}
+{% endblock %}
