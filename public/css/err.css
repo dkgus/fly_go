@@ -1,0 +1,50 @@
+/* err css S*/
+
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+h1{
+    color:rgb(72, 69, 69); 
+    text-align: right; 
+    padding:0 80px 0 0;
+    font-size: 1.3rem;
+    position: relative;
+    bottom: 70px;
+
+
+}
+
+h1::before{
+    border-left: 1px solid black;
+    content: "";
+    display: block;
+    height: 100px;
+    width: 100px;
+    position: relative;
+    right:10px;
+}
+
+
+h2{
+    text-align: right; 
+    font-size: 6rem; 
+    padding:0 80px 0 0;
+    position: relative;
+    bottom:130px;
+    right: 20px;
+    
+}
+
+body{
+    background: url("../cliff2.jpg") no-repeat;
+    background-position: center center;
+    background-size: cover;
+    width: 100%;
+
+}
+
+
+
+
+/* err css E*/
