@@ -1,0 +1,141 @@
+/* nav시작 */
+
+a{
+    color:black;
+    text-decoration: none;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:white;
+    padding: 10px 20px;
+    /* overflow: hidden; 수정 */ 
+}
+
+
+.navbar__logo,.navbar__menu,.navbar__icons{
+    transition: height 0.4s;
+    
+}
+
+
+.navbar__logo {
+    color:white;
+    font-size: 24px;
+}
+
+.navbar__logo a{
+    font-family: 'Akaya Kanadaka', cursive;
+
+}
+
+
+.navbar__logo i{
+    color:rgb(113, 146, 150);
+    padding-right: 7px;
+    
+}
+
+
+
+
+.navbar__menu{
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+
+    
+    
+
+} 
+
+
+
+.navbar__menu li a:hover{
+    background-color: rgb(113, 146, 150);
+    border-radius: 4px;
+    padding: 8px 0;
+    
+}
+
+
+.navbar__menu > li{
+    padding: 8px 12px 0 100px;
+    text-align: center;
+    position: relative;    
+}
+
+.navbar__menu ol {
+    /* padding:30px 0 5px 0;  - 수정 */
+    text-align: center;
+    position: absolute;
+    /* padding-bottom: 30px; - 수정 */
+    /* width: 130px; - 수정 */
+	 /* 수정 추가 S */
+	min-width: 150px; 
+	background-color: #ffffff; 
+	border-radius: 5px; 
+	margin-top: 10px;
+	padding: 10px 0 20px 0; 
+	left: 85px; 
+	display: none; 
+	/* 수정 추가 E */
+}
+
+/* 수정 추가 */
+.navbar__menu > li.on ol { display: block; }
+
+.navbar__menu ol > li{
+	 /* 수정 
+    position: relative;
+	right: 45px;  
+   */
+    font-size: 0.95rem;
+	
+    /* margin-bottom: 18px; 수정 */
+	/* 수정 추가 S */
+	padding: 7px 15px;
+	white-space: nowrap; 
+	text-align: left; 
+	/* 수정 추가 E */
+}
+.navbar__menu .left{
+    right: 17px;
+}
+
+
+
+.navbar__icons li{
+    padding: 8px 12px;
+}
+
+.navbar__icons{
+    list-style: none;
+    display: flex;
+    color:rgb(113, 146, 150);
+
+    
+    
+}
+
+.navbar__toogleBtn{
+    display: none;
+    position: absolute;
+    right:32px;
+    font-size: 24px;
+    color:rgb(113, 146, 150);
+
+}
+
+
+
+/* 붙인거 */
+.navbar{
+    position: fixed;
+    z-index: 100000;
+    width: 98%;
+    }
+
+/* nav끝 */
