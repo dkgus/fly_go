@@ -9,6 +9,7 @@ const path = require('path');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const { sequelize } = require('./models');
+const loginSession = require('./middlewares/member/login_session'); // 로그인 세션 처리 
 
 
 //라우터
@@ -59,6 +60,8 @@ app.use(session({
 	},
 	name : "YHSESSID",
 }));
+
+app.use(loginSession()); // 로그인 세션 처리 
 
 
 
