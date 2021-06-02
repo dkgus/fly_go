@@ -37,7 +37,7 @@ module.exports.joinFormValidator = async function (req, res, next) {
 		}
 		
 		/** 이미 등록된 아이디 여부 체크 */
-		const sql = "SELECT COUNT(*) as cnt FROM member2 WHERE memId = ?";
+		const sql = "SELECT COUNT(*) as cnt FROM fly_member WHERE memId = ?";
 		const rows = await sequelize.query(sql, {
 			replacements : [memId],
 			type : QueryTypes.SELECT,

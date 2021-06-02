@@ -16,7 +16,7 @@ const member = {
 	*/
 	join : async function(params) { // params는 들어오는 데이터를 말함
 		try {
-			const sql = `INSERT INTO member2 (memId, memPw, memNm, mobile, profile) 
+			const sql = `INSERT INTO fly_member (memId, memPw, memNm, mobile, profile) 
 									VALUES (:memId, :memPw, :memNm, :mobile, :profile)`;
 									
 			const hash = await bcrypt.hash(params.memPw, 10);
@@ -45,7 +45,7 @@ const member = {
 
 	login : async function (memId, memPw, req) {
 		try {
-			const sql = "SELECT * FROM member2 WHERE memId = ?";
+			const sql = "SELECT * FROM fly_member WHERE memId = ?";
 			const rows = await sequelize.query(sql, {
 				replacements : [memId],// memId = ?에 치환될 수 있는것이 replacements
 				type : QueryTypes.SELECT,

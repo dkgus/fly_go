@@ -56,6 +56,7 @@ router.route("/join")
 			}
 		});
 
+
 router.route("/login")
 		/** 로그인 양식 출력 */
 		.get((req, res, next) => {
@@ -66,7 +67,7 @@ router.route("/login")
 			try {
 				const result = await member.login(req.body.memId, req.body.memPw, req);
 				if (result) { // 로그인 성공
-					return res.send("<script>location.href='/';</script>");
+					return res.send("<script>location.href='/member/mypage';</script>");
 				} else { // 로그인 실패 
 					throw new Error("로그인 실패!");
 				}
@@ -75,6 +76,13 @@ router.route("/login")
 				return message.alertBack(err.message, res);
 			}
 		});
+
+
+
+router.get("/mypage", (req, res, next) => {
+	res.render("member/mypage");
+});
+
 
 
 
